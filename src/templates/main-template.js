@@ -30,7 +30,7 @@ const Main = ({ data, location, pageContext }) => {
       </section>
       <section>
         <h2>{author}</h2>
-        <DayAuthor authorsList ={authorData} labelMore={labelMore} />
+        <DayAuthor authorsList={authorData} labelMore={labelMore} />
       </section>
     </Layout>
   )
@@ -42,6 +42,7 @@ export const query = graphql`
   query($lang: String!) {
     dayAuthor: allMarkdownRemark(
       filter: { frontmatter: { type: { eq: "director" }, lang: { eq: $lang } } }
+      sort: { fields: [frontmatter___imageName] }
     ) {
       nodes {
         frontmatter {

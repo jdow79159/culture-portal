@@ -7,6 +7,7 @@ const getDate = () => {
 }
 
 const DayAuthor = ({ authorsList, labelMore='More details'}) => {
+  console.log('authorsList', authorsList);
   if(!authorsList.length) return <p>No data</p>;
 
   const date = getDate();
