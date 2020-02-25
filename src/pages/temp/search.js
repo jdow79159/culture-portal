@@ -2,6 +2,7 @@ import React from 'react';
 
 import SearchDirector from '../../components/SearchDirector/searchDirector';
 import Layout from '../../components/layout'
+
 import './search.css';
 
 const authors = [
