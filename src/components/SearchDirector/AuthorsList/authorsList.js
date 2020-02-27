@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from '../../../components/AppImage/AppImage';
-import AOS from 'aos'; 
 import { Button } from 'react-bootstrap';
 import {navigate} from 'gatsby';
 import { getLangPath } from "../../../utils/language"
@@ -10,9 +9,6 @@ import '../../../../node_modules/aos/dist/aos.css';
 import './authorsList.css';
 
 const AuthorList = ({ list, lang, sourceFields }) => {
-    if (document) {
-        AOS.init();
-      }
     const items = list.map((author) => {
         return (
             <div className="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-4 col-xl-4 mb-5 card-wrapper"

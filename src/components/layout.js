@@ -1,9 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Navigation from "./navigation/navigation"
-
+import AOS from 'aos'
 
 const Layout = ({ children, location }) => {
+  if (window) {
+    AOS.init();
+  }
   return (
     <div className="min-vh-100 d-flex flex-column">
       <header className="bg-primary">
